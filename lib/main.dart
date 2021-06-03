@@ -12,7 +12,7 @@ void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     debugShowMaterialGrid: false,
-    home: Screen(),
+    home: HomeApp(),
   ));
 }
 
