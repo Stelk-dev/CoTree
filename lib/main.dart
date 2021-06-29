@@ -4,15 +4,19 @@ import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
+import 'package:device_preview/device_preview.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
 
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    debugShowMaterialGrid: false,
-    home: HomeApp(),
+  runApp(DevicePreview(
+    builder: (context) => MaterialApp(
+      debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
+      builder: DevicePreview.appBuilder,
+      home: HomeApp(),
+    ),
   ));
 }
 
