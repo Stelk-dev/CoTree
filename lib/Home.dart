@@ -412,9 +412,13 @@ class _HomeAppState extends State<HomeApp> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home), title: Text("Home")),
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.bookmark), title: Text("Piante salvate"))
+              icon: Icon(Icons.bookmark),
+              label: "Piante salvate",
+            ),
           ],
         ),
       ),
